@@ -1,0 +1,80 @@
+:root {
+  color-scheme: light;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #24231f;
+  background: #f4efe6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 0%, #fffdf8 0%, #f4efe6 70%);
+}
+
+.app {
+  width: min(100% - 32px, 760px);
+  margin: 0 auto;
+  padding: clamp(36px, 7vh, 72px) 0 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-header { text-align: center; margin-bottom: 24px; }
+.eyebrow {
+  margin: 0 0 10px;
+  color: #8b6c4d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+h1 {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  font-size: clamp(2.6rem, 8vw, 4.4rem);
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+.intro { margin: 15px 0 0; color: #716e67; font-size: 0.98rem; }
+
+.resize-button {
+  margin-bottom: 20px;
+  padding: 12px 19px;
+  border: 0;
+  border-radius: 999px;
+  color: #fffdf8;
+  background: #34332e;
+  font: 600 0.9rem 'Segoe UI', Arial, sans-serif;
+  cursor: pointer;
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+.resize-button:hover { background: #575248; transform: translateY(-1px); }
+.resize-button:focus-visible { outline: 3px solid #ca8c4b; outline-offset: 3px; }
+
+.drawing-board {
+  width: min(100%, 600px);
+  aspect-ratio: 1;
+  padding: 10px;
+  border: 1px solid #e6dfd3;
+  border-radius: 14px;
+  background: #fffdf9;
+  box-shadow: 0 22px 55px rgb(73 58 37 / 12%), 0 3px 9px rgb(73 58 37 / 6%);
+}
+.grid { display: flex; flex-direction: column; width: 100%; height: 100%; overflow: hidden; }
+.grid-row { display: flex; flex: 1; min-height: 0; }
+.grid-square { flex: 1; min-width: 0; background: #f5f2ec; }
+.hint { margin: 17px 0 0; color: #918b80; font-size: 0.78rem; text-align: center; }
+
+@media (max-width: 480px) {
+  .app { width: min(100% - 24px, 760px); padding-top: 44px; }
+  .drawing-board { padding: 7px; border-radius: 11px; }
+  .intro { max-width: 290px; line-height: 1.5; }
+}

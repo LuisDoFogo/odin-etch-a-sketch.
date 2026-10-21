@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4efe6" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="page-header">
+        <p class="eyebrow">Un pequeño espacio para crear</p>
+        <h1>Etch-a-Sketch</h1>
+        <p class="intro">Pasa el cursor por el tablero y deja que aparezcan los colores.</p>
+      </header>
+
+      <button class="resize-button" id="resize-button" type="button">
+        Cambiar tamaño de la cuadrícula
+      </button>
+
+      <section class="drawing-board" aria-label="Área de dibujo">
+        <div class="grid" id="grid" aria-label="Cuadrícula de dibujo"></div>
+      </section>
+
+      <p class="hint">Cada pasada añade un tono nuevo; diez pasadas oscurecen el cuadro por completo.</p>
+    </main>
+  </body>
+</html>
